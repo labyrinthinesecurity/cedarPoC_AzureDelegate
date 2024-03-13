@@ -6,6 +6,8 @@ Specifically, it targets a preview called "delegate role assignments" 😁
 
 A cool thing about Cedar is that's it's provably secure. It's been subjected to full formal verification.
 
+![example](https://github.com/labyrinthinesecurity/cedarPoC_AzureDelegate/blob/main/AWSAZ.png)
+
 The first half of the image shows how the new delegation model is currently implemented. It uses one permit and one forbid statements.
 The bottom half shows the two "forbid" statements which are currently missing in the model, in my opinion.
 
