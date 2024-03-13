@@ -1,0 +1,71 @@
+[
+    {
+        "uid": {
+            "type": "Group",
+            "id": "Sales"
+        },
+        "attrs": {
+            "manager": { "type": "User", "id": "charly" },
+            "role": "none"
+        },
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "Group",
+            "id": "Marketing"
+        },
+        "attrs": {
+            "manager": { "type": "User", "id": "alice" },
+            "role": "none"
+        },
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "Group",
+            "id": "IAM"
+        },
+        "attrs": {
+           "manager": { "type": "User", "id": "ron" },
+            "role": "none"
+        },
+        "parents": []
+    },
+    {
+        "uid": {
+            "type": "User",
+            "id": "alice"
+        },
+        "attrs": {
+            "role": "Deleguate",
+            "manager": { "type": "User", "id": "ron" }
+        },
+        "parents": [
+            {
+                "type": "Group",
+                "id": "Marketing"
+            },
+            {
+                "type": "Group",
+                "id": "IAM"
+            }
+        ]
+    },
+    {
+        "uid": {
+            "type": "User",
+            "id": "bob"
+        },
+        "attrs": {
+            "role": "devOps",
+            "manager": { "type": "User", "id": "ron" }
+        },
+        "parents": [
+            {
+                "type": "Group",
+                "id": "Marketing"
+            }
+        ]
+    }
+]
