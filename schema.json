@@ -1,0 +1,50 @@
+{
+    "": {
+        "entityTypes": {
+            "User": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {
+                       "role":  {
+                          "type": "String"
+                       },
+                       "manager":  {
+                          "type": "Entity",
+                          "name": "User"
+                       }
+                    }
+                },
+                "memberOfTypes": [
+                    "Group"
+                ]
+            },
+            "Group": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {
+                       "role":  {
+                          "type": "String"
+                       },
+                       "manager":  {
+                          "type": "Entity",
+                          "name": "User"
+                       }
+                    }
+                },
+                "memberOfTypes": []
+            }
+        },
+        "actions": {
+            "AssignKeyVaultOperatorRole": {
+                "appliesTo": {
+                    "resourceTypes": [
+                        "User"
+                    ],
+                    "principalTypes": [
+                        "User"
+                    ]
+                }
+            }
+        }
+    }
+}
